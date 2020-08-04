@@ -1,7 +1,7 @@
 <template>
   <div>
   <!-- Change toggleable to md at deployment -->
-  <b-navbar toggleable="lg" type="dark" variant="dark">
+  <b-navbar class="navbar" toggleable="md" type="dark">
     <b-navbar-brand class="special-text">A. Heggin</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -10,10 +10,10 @@
 
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item class="smooth-select" href="#">Home</b-nav-item>
-        <b-nav-item class="smooth-select" href="#">About Me</b-nav-item>
-        <b-nav-item class="smooth-select" href="#">Projects</b-nav-item>
-        <b-nav-item class="smooth-select" href="#">Contact</b-nav-item>
+        <b-nav-item class="smooth-select" href="#home">Home</b-nav-item>
+        <b-nav-item class="smooth-select" href="#projects">Projects</b-nav-item>
+        <b-nav-item class="smooth-select" href="#about">About Me</b-nav-item>
+        <b-nav-item class="smooth-select" href="#contact">Contact</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -21,9 +21,14 @@
 </template>
 
 <style>
+
   @font-face {
     font-family: "Balista";
     src: url("../fonts/Balista-2OWro.ttf") format("truetype");
+  }
+
+  a:hover {
+    transition: all 0.5s ease-out;
   }
 
   .special-text {
@@ -32,7 +37,10 @@
     cursor: default;
   }
 
-  a:hover {
-    transition: all 0.6s ease-out;
+  .navbar {
+    background-color: black;
+    -webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	  -moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
+	  box-shadow:0 0 10px rgba(0, 0, 0, 0.5);
   }
 </style>

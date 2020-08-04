@@ -1,44 +1,32 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        Portfolio
-      </h1>
-      <h2 class="subtitle">
-        My Personal Portfolio
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div>
+    <particles class="fade-in">
+    </particles>
+    <cjumbo>
+    </cjumbo>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import cjumbo from '~/components/cJumbo.vue'
+import particles from '~/components/Particles.vue'
 
 export default {
+  head: {
+    title: 'A. Heggin Portfolio Page'
+  },
+
   components: {
-    Logo
-  }
+    cjumbo,
+    particles
+  },
+
 }
 </script>
 
+}
 <style>
+/*
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -47,26 +35,28 @@ export default {
   align-items: center;
   text-align: center;
 }
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+*/
+html {
+  animation: fade-in 0.3s ease-in;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+hr {
+  width: 50%;
+  border-color: white;
 }
 
-.links {
-  padding-top: 15px;
+.fade-in {
+  animation: fade-in 0.3s ease-in;
+}
+
+@keyframes levitate {
+  0% {top: 0px;}
+  50% {top: 10px;}
+  100% {top: 0px;}
+}
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 </style>

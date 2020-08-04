@@ -1,6 +1,8 @@
 
 export default {
   mode: 'universal',
+  /* set to static when generating static files */
+  target: 'static',
   /*
   ** Headers of the page
   */
@@ -27,8 +29,9 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+ plugins: [
+  {src: '~/plugins/particle.js', mode: 'client'}
+],
   /*
   ** Nuxt.js dev-modules
   */
@@ -53,6 +56,6 @@ export default {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
-    }
-  }
+    },
+  },
 }
